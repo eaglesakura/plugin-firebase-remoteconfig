@@ -38,7 +38,7 @@ public class ConfigClassGenerator {
     public AndroidPropGenTask() {
     }
 
-    public void floatProperty(String propName, float propDefaultValue) {
+    public void floatConfig(String propName, float propDefaultValue) {
         properties.add(new Property("${propName}", propName, propDefaultValue) {
             @Override
             String generateGetter() {
@@ -47,7 +47,7 @@ public class ConfigClassGenerator {
         })
     }
 
-    public void doubleProperty(String propName, double propDefaultValue) {
+    public void doubleConfig(String propName, double propDefaultValue) {
         properties.add(new Property("${propName}", propName, propDefaultValue) {
             @Override
             String generateGetter() {
@@ -56,7 +56,7 @@ public class ConfigClassGenerator {
         })
     }
 
-    public void booleanProperty(String propName, boolean propDefaultValue) {
+    public void booleanConfig(String propName, boolean propDefaultValue) {
         properties.add(new Property("${propName}", propName, propDefaultValue) {
             @Override
             String generateGetter() {
@@ -65,7 +65,7 @@ public class ConfigClassGenerator {
         })
     }
 
-    public void intProperty(String propName, int propDefaultValue) {
+    public void intConfig(String propName, int propDefaultValue) {
         properties.add(new Property("${propName}", propName, propDefaultValue) {
             @Override
             String generateGetter() {
@@ -74,7 +74,7 @@ public class ConfigClassGenerator {
         })
     }
 
-    public void longProperty(String propName, long propDefaultValue) {
+    public void longConfig(String propName, long propDefaultValue) {
         properties.add(new Property("${propName}", propName, propDefaultValue) {
             @Override
             String generateGetter() {
@@ -83,7 +83,7 @@ public class ConfigClassGenerator {
         })
     }
 
-    public void stringProperty(String propName, String propDefaultValue) {
+    public void stringConfig(String propName, String propDefaultValue) {
         properties.add(new Property("${propName}", propName, propDefaultValue) {
             @Override
             String generateGetter() {
@@ -98,7 +98,7 @@ public class ConfigClassGenerator {
      * @param enumFullName
      * @param propDefaultValue
      */
-    public void enumProperty(String propName, final String enumFullName, String propDefaultValue) {
+    public void enumConfig(String propName, final String enumFullName, String propDefaultValue) {
         properties.add(new Property("${propName}", propName, propDefaultValue) {
             @Override
             String generateGetter() {

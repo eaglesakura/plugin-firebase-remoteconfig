@@ -10,15 +10,15 @@ public class FirebaseRemoteConfigGenTaskTest extends GroovyTestCase {
         task.outDirectory = new File("gen");
 
         def GeneratedProp = task.newConfig("com.eaglesakura.GeneratedFirebaseConfig");
-        GeneratedProp.stringProperty("string_value", "nil");
-        GeneratedProp.doubleProperty("double_value", 1.2345);
-        GeneratedProp.doubleProperty("floatValue", 1.23f);
-        GeneratedProp.longProperty("longValue", 12345);
-        GeneratedProp.intProperty("intValue", 123);
+        GeneratedProp.stringConfig("string_value", "nil");
+        GeneratedProp.doubleConfig("double_value", 1.2345);
+        GeneratedProp.doubleConfig("floatValue", 1.23f);
+        GeneratedProp.longConfig("longValue", 12345);
+        GeneratedProp.intConfig("intValue", 123);
 
         def SettingClass = task.newConfig("com.eaglesakura.db.GeneratedFirebaseConfig");
-        SettingClass.booleanProperty("boolValue", false);
-        SettingClass.enumProperty("enumValue", TestEnum.class.getName(), TestEnum.Hoge.name());
+        SettingClass.booleanConfig("boolValue", false);
+        SettingClass.enumConfig("enumValue", TestEnum.class.getName(), TestEnum.Hoge.name());
 
         task.execute();
     }
