@@ -184,6 +184,7 @@ public class ConfigClassGenerator {
             // Firebaseへ渡す
             writer.writeLine("mRemoteConfig.setDefaults(defValues);")
             writer.popIndent(true).writeLine("}");
+            writer.writeLine("return mRemoteConfig;")
 
             // メソッドを閉じる
             writer.popIndent(true).writeLine("}");
