@@ -13,8 +13,8 @@ public class ConfigClassGenerator {
      * 頭の１文字目を大文字にする
      */
     static String toCamelCase(String base) {
-        CNV_SNAKE:
         // スネークケースをキャメルケースに変換する
+        CNV_SNAKE:
         {
             def split = base.split("_");
             if (split.length > 1) {
